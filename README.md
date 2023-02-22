@@ -17,7 +17,7 @@ The inputGenerator is designed to take 5 Arguments in the following order:
 - low (l): It refers to the minimum number that the fuzzer will take into account, for example, if low = -1, the fuzzer will not generate elements less than -1
 - high (h): Refers to the maximum number that the fuzzer will take into account, for example, if high = 5, the fuzzer will not generate elements greater than 5
 - input_type (it): Refers to the type of the elements in the list. Currently, it is possible only two options: 'int' or 'float'
-- t and (t): Refers to the ending time of the program execution. 
+- t_and (t): Refers to the ending time of the program execution. 
 - output (o): Refers to the name of the output file.
 
 To execute the script follow the command line:
