@@ -4,3 +4,7 @@ Metamorphic Testing (MT) is a testing technique that can effectively alleviate t
 
 Kanewala et al. suggested the Predicting Metamorphic Relations (PMR) approach for automatic prediction of applicable MRs picked from a predefined list. PMR is based on a Support Vector Machine (SVM) model using features derived from the Control Flow Graphs (CFGs) of 100 Java methods. The original study of Kanewala et al. showed encouraging results, but developing classification models from CFG-related features is costly. Also, it is required to have a labelled data set with the ground true to train the models.
 
+# Repository Organization
+
+- Folder 'AllMethod' Stores all the methods used. Those mehtods are written in Java and Python.
+- Folder 'FirstExp': 
