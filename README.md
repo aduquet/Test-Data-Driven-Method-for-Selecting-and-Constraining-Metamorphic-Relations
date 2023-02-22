@@ -6,6 +6,6 @@ Kanewala et al. suggested the Predicting Metamorphic Relations (PMR) approach fo
 
 ## Repository Organization
 
-# - Folder 'AllMethod' 
-    Stores all the methods used. Those mehtods are written in Java and Python.
-- Folder 'FirstExp': 
+- Folder 'AllMethod': Contains all the methods used. Those mehtods are written in Java and Python.
+- Folder 'FirstExp': Contains some fast initial experiments. The scripts are mostly in Jupyter Notebook
+- Folder 'RealExp': Contains the real experiments :) 
