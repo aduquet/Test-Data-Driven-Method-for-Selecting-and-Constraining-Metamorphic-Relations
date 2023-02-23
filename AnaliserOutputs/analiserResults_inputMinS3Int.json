@@ -421,8 +421,8 @@
     },
     "28":{
         "methodName":"sumOfLogarithms",
-        "MR1_No_Violated":60,
-        "MR1_Violated":40,
+        "MR1_No_Violated":100,
+        "MR1_Violated":0,
         "MR2_No_Violated":100,
         "MR2_Violated":0,
         "MR3_No_Violated":100,
@@ -436,8 +436,8 @@
     },
     "29":{
         "methodName":"variance",
-        "MR1_No_Violated":72,
-        "MR1_Violated":28,
+        "MR1_No_Violated":100,
+        "MR1_Violated":0,
         "MR2_No_Violated":97,
         "MR2_Violated":3,
         "MR3_No_Violated":100,

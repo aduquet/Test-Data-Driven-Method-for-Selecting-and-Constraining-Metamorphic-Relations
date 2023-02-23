@@ -3,6 +3,7 @@ import pandas as pd
 import pathlib
 import json
 import os
+import math
 
 def dataExecution(testData, outputData, outputchecker, pathdata, pathChecker):
     AUXtestInput = []
@@ -56,11 +57,17 @@ def dataExecution(testData, outputData, outputchecker, pathdata, pathChecker):
     for index, row in mainDF.iterrows():
 
         ## MR1 -> No violation when the output remain constant
-        if row['output_testInput'] == row['output_MR1']:
+        if math.isclose(row['output_testInput'],row['output_MR1'], rel_tol=1e-9):
             finalDF.at[index, 'MR1_checker'] = 'No-violated'
-        
-        if row['output_testInput'] != row['output_MR1']:
+
+        if not math.isclose(row['output_testInput'],row['output_MR1'], rel_tol=1e-9):
             finalDF.at[index, 'MR1_checker'] = 'Violated'
+
+        # if row['output_testInput'] == row['output_MR1']:
+        #     finalDF.at[index, 'MR1_checker'] = 'No-violated'
+        
+        # if row['output_testInput'] != row['output_MR1']:
+        #     finalDF.at[index, 'MR1_checker'] = 'Violated'
         
         ## MR2 -> No violation when the output increace remain constant
         if row['output_testInput'] <= row['output_MR2'] :
