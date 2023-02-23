@@ -64,7 +64,7 @@ def dataExecution(testData, outputData, outputchecker, pathdata, pathChecker):
         
         ## MR2 -> No violation when the output increace remain constant
         if row['output_testInput'] <= row['output_MR2'] :
-            finalDF.at[index, 'MR1_checker'] = 'No-violated'
+            finalDF.at[index, 'MR2_checker'] = 'No-violated'
         
         if row['output_testInput'] > row['output_MR2']:
             finalDF.at[index, 'MR2_checker'] = 'Violated'
