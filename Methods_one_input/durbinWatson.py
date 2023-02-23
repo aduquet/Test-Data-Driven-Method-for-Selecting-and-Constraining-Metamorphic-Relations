@@ -22,8 +22,7 @@ public static double durbinWatson(DoubleArrayList data) {
 
 def durbinWatson(data):
     size = len(data)
-    if(size < 2):
-        raise NameError('data sequence must contain at least two values.')
+
 
     elements = data.copy()
     run = 0

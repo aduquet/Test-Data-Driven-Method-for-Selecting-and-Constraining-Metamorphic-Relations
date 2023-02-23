@@ -7,16 +7,21 @@ def skew(data):
     sumPD = 0
     sumSq = 0
 
-    for i in range(0, len(data)):
-        suma += data[i]
-        sumSq += data[i] * data[i]
+    try:
 
-    mean = suma / len(data)
-    standardDeviation = math.sqrt((sumSq - mean * suma) / len(data))
+        for i in range(0, len(data)):
+            suma += data[i]
+            sumSq += data[i] * data[i]
 
-    for i in range(0, len(data)):
-        sumPD += math.pow(data[i] - mean, 3)
+        mean = suma / len(data)
+        standardDeviation = math.sqrt((sumSq - mean * suma) / len(data))
 
-    moment3 = sumPD / len(data)
+        for i in range(0, len(data)):
+            sumPD += math.pow(data[i] - mean, 3)
 
-    return moment3 / (standardDeviation * standardDeviation * standardDeviation)
+        moment3 = sumPD / len(data)
+
+        return moment3 / (standardDeviation * standardDeviation * standardDeviation)
+
+    except:
+        return -11111

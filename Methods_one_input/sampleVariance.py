@@ -18,6 +18,7 @@ def sampleVariance(data):
     elements = data.copy()
     size = len(elements)
     suma = 0
+    sum = 0
 
     if(size == 0):
         raise NameError('IligalArgumentException')
@@ -27,7 +28,7 @@ def sampleVariance(data):
 
     mean = sum/size
 
-    for i in range(size, -1, -1):
+    for i in range(size,-1):
         delta = elements[i] - mean
         suma += delta * delta
 

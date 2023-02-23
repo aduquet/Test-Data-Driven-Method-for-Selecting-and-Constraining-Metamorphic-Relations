@@ -1,9 +1,10 @@
+#  (Reverse an array) 
+
 def reverse(a):
-    r = len(a)
+    r = []
     cnt = 0
 
-    for i in range(len(a) - 1, -1, -1):
-        r[cnt] = a[i]
-        cnt += 1
+    for i in range(len(a), -1):
+        r.append(a[i])
 
     return r

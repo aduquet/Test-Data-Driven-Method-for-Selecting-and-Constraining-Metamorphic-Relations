@@ -20,7 +20,7 @@ def product(data):
     elements = data.copy()
     product = 1
 
-    for i in range(size, -1, -1):
+    for i in range(size, -1):
         product *= elements[i]
 
     return product

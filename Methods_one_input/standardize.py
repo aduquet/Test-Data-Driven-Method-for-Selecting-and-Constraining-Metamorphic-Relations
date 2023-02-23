@@ -16,14 +16,19 @@ def standardize(data):
     suma = 0
     sumSq = 0
 
-    for i in range(0, len(data)):
-        suma += data[i]
-        sumSq += data[i] * data[i]
+    try:
 
-    mean = suma / len(data)
-    sd = math.sqrt((sumSq - mean * suma) / len(data))
+        for i in range(0, len(data)):
+            suma += data[i]
+            sumSq += data[i] * data[i]
 
-    for i in range(0, len(data)):
-        data[i] = (data[i] - mean) / sd
+        mean = suma / len(data)
+        sd = math.sqrt((sumSq - mean * suma) / len(data))
 
-    return data
+        for i in range(0, len(data)):
+            data[i] = (data[i] - mean) / sd
+
+        return data
+    
+    except:
+        return -11111

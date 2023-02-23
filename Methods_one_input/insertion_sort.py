@@ -1,6 +1,6 @@
 def insertion_sort(arrays):
 
-    for i in range(1, len(len(arrays))):
+    for i in range(1, len(arrays)):
         j = i
 
         B = arrays[i]
