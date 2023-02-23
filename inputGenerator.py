@@ -4,18 +4,17 @@ import numpy as np
 import glob as gl
 import pathlib
 import time
-import json
 import os
 
 def fuzzer(low, high, input_type):
 
     if input_type == 'int':
-        size = np.random.uniform(low=0, high=15, size=1).astype(int)
+        size = np.random.uniform(low=3, high=15, size=1).astype(int)
         a = np.random.randint(low,high,size).tolist()
         return a
     
     if input_type == 'float':
-        size = np.random.uniform(low=0, high=15, size=1).astype(int)
+        size = np.random.uniform(low=2, high=15, size=2).astype(int)
         a = np.random.random(size).tolist()
         return a
     
