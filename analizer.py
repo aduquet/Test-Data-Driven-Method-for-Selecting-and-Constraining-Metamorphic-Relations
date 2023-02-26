@@ -31,66 +31,66 @@ def infoExtractor(methodName, df):
     mr5Keys = mr5.keys().to_list()
     mr6Keys = mr6.keys().to_list()
 
-    MR1_No_Violated = 0
+    MR1_Not_violated = 0
     MR1_Violated = 0
 
-    MR2_No_Violated = 0
+    MR2_Not_violated = 0
     MR2_Violated = 0
 
-    MR3_No_Violated = 0
+    MR3_Not_violated = 0
     MR3_Violated = 0
 
-    MR4_No_Violated = 0
+    MR4_Not_violated = 0
     MR4_Violated = 0
 
-    MR5_No_Violated = 0
+    MR5_Not_violated = 0
     MR5_Violated = 0
 
-    MR6_No_Violated = 0
+    MR6_Not_violated = 0
     MR6_Violated = 0
 
-    if 'No-violated' in mr1Keys:
-        MR1_No_Violated = round((mr1['No-violated']*100)/size)
+    if 'Not-violated' in mr1Keys:
+        MR1_Not_violated = round((mr1['Not-violated']*100)/size)
     
     if 'Violated' in mr1Keys:
 
         MR1_Violated = round((mr1['Violated']*100)/size)
 
     ## MR2
-    if 'No-violated' in mr2Keys:
-        MR2_No_Violated = round((mr2['No-violated']*100)/size)
+    if 'Not-violated' in mr2Keys:
+        MR2_Not_violated = round((mr2['Not-violated']*100)/size)
     
     if 'Violated' in mr2Keys:
 
         MR2_Violated = round((mr2['Violated']*100)/size)
 
     # MR3
-    if 'No-violated' in mr3Keys:
-        MR3_No_Violated = round((mr3['No-violated']*100)/size)
+    if 'Not-violated' in mr3Keys:
+        MR3_Not_violated = round((mr3['Not-violated']*100)/size)
     
     if 'Violated' in mr3Keys:
 
         MR3_Violated = round((mr3['Violated']*100)/size)
     
     # MR4
-    if 'No-violated' in mr4Keys:
-        MR4_No_Violated = round((mr4['No-violated']*100)/size)
+    if 'Not-violated' in mr4Keys:
+        MR4_Not_violated = round((mr4['Not-violated']*100)/size)
     
     if 'Violated' in mr4Keys:
 
         MR4_Violated = round((mr4['Violated']*100)/size)
 
     # MR5
-    if 'No-violated' in mr5Keys:
-        MR5_No_Violated = round((mr5['No-violated']*100)/size)
+    if 'Not-violated' in mr5Keys:
+        MR5_Not_violated = round((mr5['Not-violated']*100)/size)
     
     if 'Violated' in mr5Keys:
 
         MR5_Violated = round((mr5['Violated']*100)/size)
     
     # MR6
-    if 'No-violated' in mr6Keys:
-        MR6_No_Violated = round((mr6['No-violated']*100)/size)
+    if 'Not-violated' in mr6Keys:
+        MR6_Not_violated = round((mr6['Not-violated']*100)/size)
     
     if 'Violated' in mr6Keys:
         MR6_Violated = round((mr6['Violated']*100)/size)
@@ -98,22 +98,22 @@ def infoExtractor(methodName, df):
     mainDF = {
         'methodName': methodName,
         
-        'MR1_No_Violated': MR1_No_Violated,
+        'MR1_Not_violated': MR1_Not_violated,
         'MR1_Violated' : MR1_Violated,
         
-        'MR2_No_Violated': MR2_No_Violated,
+        'MR2_Not_violated': MR2_Not_violated,
         'MR2_Violated' : MR2_Violated,
         
-        'MR3_No_Violated': MR3_No_Violated,
+        'MR3_Not_violated': MR3_Not_violated,
         'MR3_Violated' : MR3_Violated,
         
-        'MR4_No_Violated': MR4_No_Violated,
+        'MR4_Not_violated': MR4_Not_violated,
         'MR4_Violated' : MR4_Violated,
         
-        'MR5_No_Violated': MR5_No_Violated,
+        'MR5_Not_violated': MR5_Not_violated,
         'MR5_Violated' : MR5_Violated,
         
-        'MR6_No_Violated': MR6_No_Violated,
+        'MR6_Not_violated': MR6_Not_violated,
         'MR6_Violated' : MR6_Violated
     }
     
