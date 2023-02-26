@@ -1,3 +1,4 @@
+from MTexecuter import MTexecuter
 from Methods_one_input.average	import	average
 import pandas as pd
 import pathlib
@@ -50,52 +51,28 @@ def dataExecution(testData, outputData, outputchecker, pathdata, pathChecker):
 
     save_csv(finalDF, outputData, pathdata)
     save_json(finalDF, outputData, pathdata)    
-    
-
-
+      
     for index, row in mainDF.iterrows():
 
-        ## MR1 -> No violation when the output remain constant
-        if row['output_testInput'] == row['output_MR1']:
-            finalDF.at[index, 'MR1_checker'] = 'No-violated'
-        
-        if row['output_testInput'] != row['output_MR1']:
-            finalDF.at[index, 'MR1_checker'] = 'Violated'
-        
-        ## MR2 -> No violation when the output increace remain constant
-        if row['output_testInput'] <= row['output_MR2'] :
-            finalDF.at[index, 'MR2_checker'] = 'No-violated'
-        
-        if row['output_testInput'] > row['output_MR2']:
-            finalDF.at[index, 'MR2_checker'] = 'Violated'
+        mr = MTexecuter(row['output_testInput'])
 
-        ## MR3 -> No violation when the output increace remain constant
-        if row['output_testInput'] <= row['output_MR3'] :
-            finalDF.at[index, 'MR3_checker'] = 'No-violated'
-        
-        if row['output_testInput'] > row['output_MR3']:
-            finalDF.at[index, 'MR3_checker'] = 'Violated'
+        #MR1
+        finalDF.at[index,'MR1_checker'] = mr.mr_PER(row['output_MR1'])
 
-        ## MR4 -> No violation when the output increace remain constant
-        if row['output_testInput'] >= row['output_MR4'] :
-            finalDF.at[index, 'MR4_checker'] = 'No-violated'
-        
-        if row['output_testInput'] < row['output_MR4']:
-            finalDF.at[index, 'MR4_checker'] = 'Violated'
+        #MR2
+        finalDF.at[index,'MR2_checker'] = mr.mr_ADD(row['output_MR2'])
 
-        ## MR5 -> No violation when the output Decrease remain constant
-        if row['output_testInput'] <= row['output_MR5'] :
-            finalDF.at[index, 'MR5_checker'] = 'No-violated'
-        
-        if row['output_testInput'] > row['output_MR5']:
-            finalDF.at[index, 'MR5_checker'] = 'Violated'
+        #MR3
+        finalDF.at[index,'MR3_checker'] = mr.mr_MUL(row['output_MR3'])
 
-        ## MR6 -> No violation when the output increace remain constant
-        if row['output_testInput'] >= row['output_MR6'] :
-            finalDF.at[index, 'MR6_checker'] = 'No-violated'
-        
-        if row['output_testInput'] < row['output_MR6']:
-            finalDF.at[index, 'MR6_checker'] = 'Violated'
+        #MR4
+        finalDF.at[index,'MR4_checker'] = mr.mr_INV(row['output_MR4'])
+
+        #MR5
+        finalDF.at[index,'MR5_checker'] = mr.mr_INC(row['output_MR5'])
+
+        #MR6
+        finalDF.at[index,'MR6_checker'] = mr.mr_EXC(row['output_MR6'])
 
     # finalDF.to_csv('add_values_MRChecker.csv')
     save_csv(finalDF, outputchecker, pathChecker)
