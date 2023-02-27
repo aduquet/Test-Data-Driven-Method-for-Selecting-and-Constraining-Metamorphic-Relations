@@ -151,18 +151,18 @@
     },
     "10":{
         "methodName":"find_max2",
-        "MR1_Not_violated":14,
-        "MR1_Violated":86,
+        "MR1_Not_violated":25,
+        "MR1_Violated":75,
         "MR2_Not_violated":100,
         "MR2_Violated":0,
         "MR3_Not_violated":100,
         "MR3_Violated":0,
         "MR4_Not_violated":100,
         "MR4_Violated":0,
-        "MR5_Not_violated":74,
-        "MR5_Violated":26,
-        "MR6_Not_violated":87,
-        "MR6_Violated":13
+        "MR5_Not_violated":100,
+        "MR5_Violated":0,
+        "MR6_Not_violated":100,
+        "MR6_Violated":0
     },
     "11":{
         "methodName":"find_median",
