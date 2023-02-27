@@ -45,7 +45,6 @@ class MTexecuter:
                 # if math.isclose(self.inputA,self.inputB, rel_tol=1e-9, abs_tol=0) and self.inputA < self.inputB:
                 else:
                     auxlist.append(False)
-            print(auxlist)
             if sum(auxlist) == 0:
                 return 'Violated'
             if sum(auxlist) == len(auxlist):
