@@ -28,7 +28,7 @@ def sumOfLogarithms(elements):
     logsum = 0
     try:
         for i in range(0, len(elements)):
-            logsum += math.log(elements[i])
+            logsum += math.log(abs(elements[i]))
 
         return logsum
     except:

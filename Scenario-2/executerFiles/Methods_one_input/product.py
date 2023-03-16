@@ -19,8 +19,11 @@ def product(data):
     size = len(data)
     elements = data.copy()
     product = 1
+    
 
-    for i in range(size, -1):
+    for i in range(size - 1, -1, -1):
+        if(elements[i] == 'N/A'):
+            return 'd/0'
         product *= elements[i]
 
     return product
